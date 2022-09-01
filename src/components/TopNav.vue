@@ -23,14 +23,16 @@ export default{
 
 </script>
 
-
 <style lang="scss" scoped>
 .topnav {
-  position: relative;
-  z-index: 10;
   background: pink;
   display: flex;
   padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   justify-content: center;
   align-items: center;
   > .logo {
@@ -45,7 +47,7 @@ export default{
       margin: 0 1em;
     }
   }
-  > .toggleAside{
+  > .toggleAside {
     width: 24px;
     height: 24px;
     background: red;
@@ -56,13 +58,13 @@ export default{
     display: none;
   }
   @media (max-width: 500px) {
-    > .menu{
+    > .menu {
       display: none;
     }
-    > .logo{
+    > .logo {
       margin: 0 auto;
     }
-    > .toggleAside{
+    > .toggleAside {
       display: inline-block;
     }
   }
