@@ -1,31 +1,36 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo">
+      <svg class="icon" >
+        <use xlink:href="#icon-mei"></use>
+      </svg>
+    </div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
-    <span class="toggleAside"  @click="toggleMEnu"></span>
+    <span class="toggleAside" @click="toggleMEnu"></span>
   </div>
 </template>
 <script lang="ts">
 import {inject, Ref} from 'vue';
 
-export default{
-  setup(){
-    const menuVisible=inject<Ref<Boolean>>('menuVisible')
-    const toggleMEnu=()=>{
-      menuVisible.value=!menuVisible.value
-    }
-    return {toggleMEnu}
-   }
-}
+export default {
+  setup() {
+    const menuVisible = inject<Ref<Boolean>>('menuVisible');
+    const toggleMEnu = () => {
+      menuVisible.value = !menuVisible.value;
+    };
+    return {toggleMEnu};
+  }
+};
 
 </script>
 
 <style lang="scss" scoped>
+$color: #28d1c9;
 .topnav {
-  background: pink;
+  color: $color;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -35,18 +40,26 @@ export default{
   z-index: 10;
   justify-content: center;
   align-items: center;
+
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    > svg{
+      width: 32px;
+      height: 32px;
+    }
   }
+
   > .menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+
     > li {
       margin: 0 1em;
     }
   }
+
   > .toggleAside {
     width: 24px;
     height: 24px;
@@ -57,6 +70,7 @@ export default{
     transform: translateY(-50%);
     display: none;
   }
+
   @media (max-width: 500px) {
     > .menu {
       display: none;
