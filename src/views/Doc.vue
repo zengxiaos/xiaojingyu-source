@@ -78,7 +78,7 @@ export default {
 
   > .content {
     flex-grow: 1;
-    padding-top: 60px;
+    padding-top: 70px;
     padding-left: 156px;
     @media (max-width: 500px) {
       padding-left: 0;
@@ -96,19 +96,19 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
+    background: white;
   }
 }
 
 aside {
-  background: lightblue;
+  background: #f5f5f5;
   width: 150px;
   padding: 16px 0;
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
-  padding-top: 70px;
   height: 100%;
+  z-index: 1;
 
   > h2 {
     margin-bottom: 4px;
@@ -123,6 +123,7 @@ aside {
       }
       .router-link-active{
         background: white;
+        border-right: 2px solid #b3d4fc;
       }
     }
   }

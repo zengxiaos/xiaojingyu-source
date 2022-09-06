@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="topnavAndBanner">
-      <Topnav />
+      <Topnav class="TopNav" />
       <div class="banner">
         <h1>Z-UI</h1>
         <h2>一个厉害的 UI 框架</h2>
@@ -47,7 +47,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 $green: #02bcb0;
 $border-radius: 4px;
@@ -58,18 +57,27 @@ $color: #007974;
 }
 .features {
   margin: 64px auto;
-  width: 400px;
+  padding: 0 16px;
   @media (min-width: 800px) {
     width: 800px;
+    >ul {
+      >li {
+        width: 50%;
+      }
+    }
   }
   @media (min-width: 1200px) {
     width: 1200px;
+    >ul {
+      >li {
+        width: 33.3333%;
+      }
+    }
   }
   >ul {
     display: flex;
     flex-wrap: wrap;
     >li {
-      width: 400px;
       margin: 16px 0;
       display: grid;
       justify-content: start;

@@ -15,7 +15,8 @@
       },
     setup(props){
       const content=ref<string>(null)
-        import(props.path).then(result=>{
+      const log=import(props.path)
+      import(props.path).then(result=>{
           content.value=result.default
         })
       return{content}

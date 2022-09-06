@@ -2,7 +2,7 @@
   <div class="topnav">
     <router-link to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-mei"></use>
+        <use xlink:href="#icon-jingyu"></use>
       </svg>
     </router-link>
     <ul class="menu">
@@ -43,6 +43,8 @@ export default {
 <style lang="scss" scoped>
 $color: #007974;
 .topnav {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background:#b7e9e6;
   color: $color;
   display: flex;
   padding: 16px;
